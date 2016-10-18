@@ -1,0 +1,11 @@
+Package: dddSnow
+Title: Snow
+Version: 0.0.0.9000
+Authors@R: person("Jean-Marie", "Lepioufle", email = "jm@nexmodeling.com", role = c("aut", "cre"))
+Description: get the snow updated by precipitation and temperature
+Depends:
+    R (>= 3.2.5)
+License: GPL (>= 3)
+Encoding: UTF-8
+LazyData: false
+RoxygenNote: 5.0.1
