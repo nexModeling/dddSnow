@@ -11,17 +11,17 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' init.snow()
+#' init.snowReservoir()
 #' }
-init.snow <-function(method=NULL,path=NULL,snomag=NULL,swe_h=NULL,middelsca=NULL,snofritt=NULL){
+init.snowReservoir <-function(method=NULL,path=NULL,snomag=NULL,swe_h=NULL,middelsca=NULL,snofritt=NULL){
 
-  snow <- switch(method,
+  snowReservoir <- switch(method,
     "manual"    = init.manual(snomag=snomag,swe_h=swe_h,middelsca=middelsca,snofritt=snofritt),
     "load"      = init.load(path=path),
     "source"    = init.source(path=path),
     (message=paste0("Invalid method:", method,".")))
 
-  return(snow)
+  return(snowReservoir)
 }
 
 init.manual <- function(snomag,swe_h,middelsca,snofritt){
@@ -34,10 +34,10 @@ init.manual <- function(snomag,swe_h,middelsca,snofritt){
 
 init.load <- function(path){
   load(paste0(path,"snowReservoir.rda"))
-  return(snow)
+  return(snowReservoir)
 }
 
 init.source <- function(path){
   source(paste0(path,"snowReservoir.R"),local=TRUE)
-  return(snow)
+  return(snowReservoir)
 }
