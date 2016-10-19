@@ -42,7 +42,7 @@ stateLZ <-function(htemp,hprecip,scaob,modelSnow,modelPrecipLZ,
                          wcdx=wcd,prox=modelSnow$Ws,nsnox=nsno,alfax=alfa,
                          nyx=ny,alfa0x=modelPrecipLZ$a0,ny0x=modelSnow$n0,ac=modelPrecipLZ$a0,hc=modelPrecipLZ$d,
                          UP=modelSnow$UP)
-                         
+
   update <- list(gisoil = MWGLAC,
                  isoil  = frasno$isoil,
                  spd    = ifelse( (frasno$spd<20000),frasno$spd,20000),
