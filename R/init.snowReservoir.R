@@ -16,15 +16,15 @@
 init.snowReservoir <-function(method=NULL,path=NULL,snomag=NULL,swe_h=NULL,middelsca=NULL,snofritt=NULL){
 
   snowReservoir <- switch(method,
-    "manual"    = init.manual(snomag=snomag,swe_h=swe_h,middelsca=middelsca,snofritt=snofritt),
-    "load"      = init.load(path=path),
-    "source"    = init.source(path=path),
+    "manual"    = init.snowReservoir.manual(snomag=snomag,swe_h=swe_h,middelsca=middelsca,snofritt=snofritt),
+    "load"      = init.snowReservoir.load(path=path),
+    "source"    = init.snowReservoir.source(path=path),
     (message=paste0("Invalid method:", method,".")))
 
   return(snowReservoir)
 }
 
-init.manual <- function(snomag,swe_h,middelsca,snofritt){
+init.snowReservoir.manual <- function(snomag,swe_h,middelsca,snofritt){
   res <- list(snomag=snomag,
                swe_h=swe_h,
                middelsca=middelsca,
@@ -32,12 +32,12 @@ init.manual <- function(snomag,swe_h,middelsca,snofritt){
   return(res)
 }
 
-init.load <- function(path){
+init.snowReservoir.load <- function(path){
   load(paste0(path,"snowReservoir.rda"))
   return(snowReservoir)
 }
 
-init.source <- function(path){
+init.snowReservoir.source <- function(path){
   source(paste0(path,"snowReservoir.R"),local=TRUE)
   return(snowReservoir)
 }

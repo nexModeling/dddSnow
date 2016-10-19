@@ -21,15 +21,15 @@
 init.snow <-function(method=NULL,path=NULL,isoil=NULL,gisoil=NULL,spd=NULL,wcd=NULL,sca=NULL,nsno=NULL,alfa=NULL,ny=NULL,snowfree=NULL){
 
   snow <- switch(method,
-    "manual"    = init.manual(isoil=isoil,gisoil=gisoil,spd=spd,wcd=wcd,sca=sca,nsno=nsno,alfa=alfa,ny=ny,snowfree=snowfree),
-    "load"      = init.load(path=path),
-    "source"    = init.source(path=path),
+    "manual"    = init.snow.manual(isoil=isoil,gisoil=gisoil,spd=spd,wcd=wcd,sca=sca,nsno=nsno,alfa=alfa,ny=ny,snowfree=snowfree),
+    "load"      = init.snow.load(path=path),
+    "source"    = init.snow.source(path=path),
     (message=paste0("Invalid method:", method,".")))
 
   return(snow)
 }
 
-init.manual <- function(isoil,gisoil,spd,wcd,sca,nsno,alfa,ny,snowfree){
+init.snow.manual <- function(isoil,gisoil,spd,wcd,sca,nsno,alfa,ny,snowfree){
    res <- list(isoil=isoil,
                gisoil=gisoil,
                spd=spd,
@@ -42,12 +42,12 @@ init.manual <- function(isoil,gisoil,spd,wcd,sca,nsno,alfa,ny,snowfree){
     return(res)
 }
 
-init.load <- function(path){
+init.snow.load <- function(path){
   load(paste0(path,"snow.rda"))
   return(snow)
 }
 
-init.source <- function(path){
+init.snow.source <- function(path){
   source(paste0(path,"snow.R"),local=TRUE)
   return(snow)
 }
