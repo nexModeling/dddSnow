@@ -1,6 +1,6 @@
 Package: dddSnow
 Type: Package
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: c(
             person("Thomas", "Skaugen", , "ths@nve.no", c("aut")),
             person("Zelalem", "Tadege", , "zme@nve.no", c("aut")),
