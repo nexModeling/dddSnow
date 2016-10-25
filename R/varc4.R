@@ -22,7 +22,7 @@
 #' @keywords snow
 #' @export
 #' @examples
-#' \dontrun{'
+#' \dontrun{
 #' varc()
 #' }
 varc <-function(ppa,ac,drange,nudyn,alphadyn,sdnux,sdalphax,nnn,u,n,redsca) {
