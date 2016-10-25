@@ -41,5 +41,10 @@ All variables must be conditional (i.e. calculated on snowcovered area)
 Note the distinction between conditional and unconditional units of melt
 18.03.2015 Recodet using only the correlation function. Alfanull ( sdalphax) and nynull( sdnux) are input
 }
+\examples{
+\dontrun{
+varc()
+}
+}
 \keyword{snow}
 
