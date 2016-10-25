@@ -5,12 +5,13 @@
 \title{Initialize information related to snow}
 \usage{
 init.snowReservoir(method = NULL, path = NULL, snomag = NULL,
-  swe_h = NULL, middelsca = NULL, snofritt = NULL)
+  swe_h = NULL, middelsca = NULL, snofritt = NULL, SAVE = FALSE,
+  pathResults = "~/")
 }
 \arguments{
-\item{method}{method for the initialization, "load", "source", "manual"}
+\item{method}{method for the initialization, "load", "manual"}
 
-\item{path}{directory where to get the files, in used when method is "load" or "source"}
+\item{path}{directory where to get the files, in used when method is "load"}
 
 \item{snomag}{snow mag, NEED MORE EXPLANATION}
 
@@ -19,6 +20,10 @@ init.snowReservoir(method = NULL, path = NULL, snomag = NULL,
 \item{middelsca}{averaged sca}
 
 \item{snofritt}{snowfree, NEED MORE EXPLANATION}
+
+\item{SAVE}{Save the results, Boolean}
+
+\item{pathResults}{Path of the results. By default: $HOME}
 }
 \description{
 Initialize the information related to snow
