@@ -6,9 +6,9 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' reservoir()
+#' stateX.snowReservoir()
 #' }
-reservoir <-function(snow){
+stateX.snowReservoir <-function(snow){
 
   #SWE pr. elevation zone
   swe_h <- snow$sca*snow$spd

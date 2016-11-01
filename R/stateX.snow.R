@@ -13,9 +13,9 @@
 #' @export
 #' @examples
 #' \dontrun{
-#' stateX()
+#' stateX.snow()
 #' }
-stateX <-function(htempX,hprecipX,scaobX,snowX,modelSnow,modelPrecipLZ){
+stateX.snow <-function(htempX,hprecipX,scaobX,snowX,modelSnow,modelPrecipLZ){
 
 
   hson <- modelSnow$nbLevelZone #elevation zones
