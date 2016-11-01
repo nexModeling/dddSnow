@@ -2,8 +2,8 @@
 
 export(init.snow)
 export(init.snowReservoir)
-export(reservoir)
 export(snogamma)
 export(stateLZ)
-export(stateX)
+export(stateX.snow)
+export(stateX.snowReservoir)
 export(varc)
