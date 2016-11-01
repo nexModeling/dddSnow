@@ -6,7 +6,7 @@
 \usage{
 init.snow(method = NULL, path = NULL, isoil = NULL, gisoil = NULL,
   spd = NULL, wcd = NULL, sca = NULL, nsno = NULL, alfa = NULL,
-  ny = NULL, snowfree = NULL, SAVE = FALSE, pathResults = "~/")
+  ny = NULL, snowfree = NULL)
 }
 \arguments{
 \item{method}{method for the initialization, "load", "source", "manual"}

@@ -20,17 +20,17 @@
 #' \dontrun{
 #' init.snow()
 #' }
-init.snow <-function(method=NULL,path=NULL,isoil=NULL,gisoil=NULL,spd=NULL,wcd=NULL,sca=NULL,nsno=NULL,alfa=NULL,ny=NULL,snowfree=NULL,SAVE=FALSE,pathResults="~/"){
+init.snow <-function(method=NULL,path=NULL,isoil=NULL,gisoil=NULL,spd=NULL,wcd=NULL,sca=NULL,nsno=NULL,alfa=NULL,ny=NULL,snowfree=NULL){
 
   snow <- switch(method,
-    "manual"    = init.snow.manual(isoil=isoil,gisoil=gisoil,spd=spd,wcd=wcd,sca=sca,nsno=nsno,alfa=alfa,ny=ny,snowfree=snowfree,SAVE=SAVE,pathResults=pathResults),
-    "load"      = init.snow.load(path=path,SAVE=SAVE,pathResults=pathResults),
+    "manual"    = init.snow.manual(isoil=isoil,gisoil=gisoil,spd=spd,wcd=wcd,sca=sca,nsno=nsno,alfa=alfa,ny=ny,snowfree=snowfree),
+    "load"      = init.snow.load(path=path),
     (message=paste0("Invalid method:", method,".")))
 
   return(snow)
 }
 
-init.snow.manual <- function(isoil,gisoil,spd,wcd,sca,nsno,alfa,ny,snowfree,SAVE,pathResults){
+init.snow.manual <- function(isoil,gisoil,spd,wcd,sca,nsno,alfa,ny,snowfree){
    snow <- list(isoil=isoil,
                gisoil=gisoil,
                spd=spd,
@@ -40,20 +40,10 @@ init.snow.manual <- function(isoil,gisoil,spd,wcd,sca,nsno,alfa,ny,snowfree,SAVE
                alfa=alfa,
                ny=ny,
                snowfree = snowfree)
-    if (SAVE){
-      pathInit <- paste0(pathResults,"init/")
-      dir.create(pathInit, showWarnings = FALSE)
-      do.call("save", list(obj="snow", file=paste0(pathInit,"snow.rda")))
-    }
     return(snow)
 }
 
-init.snow.load <- function(path,SAVE,pathResults){
+init.snow.load <- function(path){
   load(paste0(path,"snow.rda"))
-  if (SAVE){
-    pathInit <- paste0(pathResults,"init/")
-    dir.create(pathInit, showWarnings = FALSE)
-    do.call("save", list(obj="snow", file=paste0(pathInit,"snow.rda")))
-  }
   return(snow)
 }
