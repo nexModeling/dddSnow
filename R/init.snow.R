@@ -12,8 +12,6 @@
 #' @param alfa alfa parameter i nedbor gamma fordeling (NEED MORE EXPLANATION)
 #' @param ny ny parameter i nedbor gamma fordeling (NEED MORE EXPLANATION)
 #' @param snowfree percentage of snowfree area
-#' @param SAVE Save the results, Boolean
-#' @param pathResults Path of the results. By default: $HOME
 #' @keywords snow
 #' @export
 #' @examples

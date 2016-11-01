@@ -30,10 +30,6 @@ init.snow(method = NULL, path = NULL, isoil = NULL, gisoil = NULL,
 \item{ny}{ny parameter i nedbor gamma fordeling (NEED MORE EXPLANATION)}
 
 \item{snowfree}{percentage of snowfree area}
-
-\item{SAVE}{Save the results, Boolean}
-
-\item{pathResults}{Path of the results. By default: $HOME}
 }
 \description{
 Initialize the information related to snow
