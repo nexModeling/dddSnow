@@ -59,15 +59,15 @@ stateX.snow <-function(htempX,hprecipX,scaobX,snowX,modelSnow,modelPrecipLZ){
   }
 
   snowUpdate <- snowX
-  snowUpdate$gisoil <- updateGisoil
-  snowUpdate$isoil  <- updateIsoil
-  snowUpdate$spd    <- updateSpd
-  snowUpdate$wcd    <- updateWcd
-  snowUpdate$sca    <- updateSca
-  snowUpdate$nsno   <- updateNsno
-  snowUpdate$alfa   <- updateAlfa
-  snowUpdate$ny     <- updateNy
-  snowUpdate$snowfree <- updateSnowfree
+  snowUpdate$gisoil <- unlist(updateGisoil)
+  snowUpdate$isoil  <- unlist(updateIsoil)
+  snowUpdate$spd    <- unlist(updateSpd)
+  snowUpdate$wcd    <- unlist(updateWcd)
+  snowUpdate$sca    <- unlist(updateSca)
+  snowUpdate$nsno   <- unlist(updateNsno)
+  snowUpdate$alfa   <- unlist(updateAlfa)
+  snowUpdate$ny     <- unlist(updateNy)
+  snowUpdate$snowfree <- unlist(updateSnowfree)
 
   return(snowUpdate)
 }
