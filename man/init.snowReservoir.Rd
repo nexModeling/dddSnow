@@ -5,8 +5,7 @@
 \title{Initialize information related to snow}
 \usage{
 init.snowReservoir(method = NULL, path = NULL, snomag = NULL,
-  swe_h = NULL, middelsca = NULL, snofritt = NULL, SAVE = FALSE,
-  pathResults = "~/")
+  swe_h = NULL, middelsca = NULL, snofritt = NULL)
 }
 \arguments{
 \item{method}{method for the initialization, "load", "manual"}
@@ -20,10 +19,6 @@ init.snowReservoir(method = NULL, path = NULL, snomag = NULL,
 \item{middelsca}{averaged sca}
 
 \item{snofritt}{snowfree, NEED MORE EXPLANATION}
-
-\item{SAVE}{Save the results, Boolean}
-
-\item{pathResults}{Path of the results. By default: $HOME}
 }
 \description{
 Initialize the information related to snow

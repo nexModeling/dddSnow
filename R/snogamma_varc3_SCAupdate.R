@@ -127,7 +127,7 @@ snogamma <-function(PRX,PSX,MWX,scax,scaobx,spdx,wcdx,prox,nsnox,alfax,nyx,alfa0
           if(alfadyn < 0.0)print(paste("jeg er i snogamma 4.1 ppa=",ppa,ac,hc,nydyn,alfadyn,ny0x,alfa0x,nn,u,na, redsca, PSX, PRX))
           if(nydyn/alfadyn/na > 0.10000000001) {
             print(paste("diff mellom nnvarc og nn",nnvarc,nn, nnvarc-nn))
-            print(paste("nn er 0 og na er >0, akkumulasjon",nydyn/alfadyn/n))
+            # print(paste("nn er 0 og na er >0, akkumulasjon",nydyn/alfadyn/n)) <---- n: n or nn or ...
             #pause()
           }
         }
