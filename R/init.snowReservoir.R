@@ -32,6 +32,6 @@ init.snowReservoir.manual <- function(snomag,swe_h,middelsca,snofritt){
 }
 
 init.snowReservoir.load <- function(path){
-  load(paste0(path,"snowReservoir.rda"))
+  load(normalizePath(file.path(path,"snowReservoir.rda"),mustWork = FALSE))
   return(snowReservoir)
 }
