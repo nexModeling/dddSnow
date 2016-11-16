@@ -102,7 +102,7 @@ varc <-function(ppa,ac,drange,nudyn,alphadyn,sdnux,sdalphax,nnn,u,n,redsca) {
   if(vartot =="NaN")
   {
   	 print(paste("vartot=NaN (ny_varc) nudyn=",nudyn,"alphadyn=",alphadyn, "meantot=", meantot,"vartot=",vartot,"nnn=",nnn,"n=",n,"u=",u))
-     pause ()
+     #pause ()
   }
 
   nnn <- round((nudyn/alphadyn)/(sdnux/sdalphax))#sikrer korrrespondanse mellom nnn og nydyn og alfadyn
