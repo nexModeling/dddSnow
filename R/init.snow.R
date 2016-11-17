@@ -42,6 +42,9 @@ init.snow.manual <- function(isoil,gisoil,spd,wcd,sca,nsno,alfa,ny,snowfree){
 }
 
 init.snow.load <- function(path){
-  load(normalizePath(file.path(path,"snow.rda"),mustWork = FALSE))
+  env <- environment()
+  path <- normalizePath(file.path(path,"snow.rda"),mustWork = FALSE)
+  load(path, envir=env)
+  snow <- get("snow",envir = env)
   return(snow)
 }
