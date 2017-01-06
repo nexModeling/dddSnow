@@ -51,7 +51,7 @@ stateLZ <-function(htemp,hprecip,scaob,modelSnow,modelPrecipLZ,
                  nsno   = frasno$nsno,
                  alfa   = frasno$alfadyn,
                  ny     = frasno$ny,
-                 snowfree = ifelse((sca<gca),1,0)) #test for glaciermelt,  no melt if snowcovered, snowfree[idim] =0.0
+                 snowfree = ifelse((frasno$sca<gca),1,0)) #test for glaciermelt,  no melt if snowcovered, snowfree[idim] =0.0
 
   return(update)
 }
