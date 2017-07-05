@@ -4,7 +4,7 @@ Version: 0.0.1
 Authors@R: c(
             person("Thomas", "Skaugen", , "ths@nve.no", c("aut")),
             person("Zelalem", "Tadege", , "zme@nve.no", c("aut")),
-            person("Jean-Marie", "Lepioufle", , "jm@nexmodeling.com", c("aut","cre"))
+            person("Jean-Marie", "Lepioufle", , "me@jeanmarie.eu", c("aut","cre"))
              )
 Title: Snow
 Description: Get snow information from precipitation, temperature, snow coverage, ... etc
